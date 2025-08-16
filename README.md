@@ -25,6 +25,3 @@ El programa utiliza la API de [ExchangeRate-API](https://www.exchangerate-api.co
 3. Ingresar la cantidad que se desea convertir.
 4. Ver el resultado en pantalla.
 5. Repetir o salir del programa según se desee.
-
-## Autor
-Tu nombre
