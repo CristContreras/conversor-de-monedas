@@ -20,8 +20,9 @@ El programa utiliza la API de [ExchangeRate-API](https://www.exchangerate-api.co
 - IntelliJ IDEA (IDE)
 
 ## Cómo usar
-1. Ejecutar el programa en IntelliJ o desde la terminal.
-2. Elegir la opción de conversión deseada en el menú.
-3. Ingresar la cantidad que se desea convertir.
-4. Ver el resultado en pantalla.
-5. Repetir o salir del programa según se desee.
+1. Ejecutar el programa en IntelliJ o desde su IDE favorito.
+2. Debe agregar la libreria [GSON](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.13.1) para que funcione la aplicación.
+3. Elegir la opción de conversión deseada en el menú.
+4. Ingresar la cantidad que se desea convertir.
+5. Ver el resultado en pantalla.
+6. Repetir o salir del programa según se desee.
