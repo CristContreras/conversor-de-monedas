@@ -12,7 +12,7 @@ import com.google.gson.JsonObject;
 public class Myfunctions {
 
     //mostrar menu
-    public static void mostrar_menu(){
+    public static void mostrarMenu(){
         System.out.println("Bienvenido/a al Conversor de Moneda");
         System.out.println("1) Dólar =>> Peso argentino");
         System.out.println("2) Peso argentino =>> Dólar");
@@ -23,7 +23,7 @@ public class Myfunctions {
         System.out.println("7) Salir");
     }
 
-    public static int solicitar_entero(String msj, Scanner lectura){
+    public static int solicitarEntero(String msj, Scanner lectura){
         boolean repetir = true;
         String entrada = "";
         int opcion=0;
@@ -46,7 +46,7 @@ public class Myfunctions {
         System.out.println(msj);
     }
 
-    public static String generar_direccion(String monedaInicial, String monedaCambio, int cantidadACambiar){
+    public static String generarDireccion(String monedaInicial, String monedaCambio, int cantidadACambiar){
         
         String paginaExchange = "https://v6.exchangerate-api.com/v6/";
         //var apiKey = "1ee3477afadea2a872f2a810";
@@ -57,7 +57,7 @@ public class Myfunctions {
         return paginaExchange+apiKey+pair;
     }
 
-    public static void consultarApi(String direccion, int cantidadACambiar, String monedaInicial, String monedaCambio){
+    public static String consultarApi(String direccion, int cantidadACambiar, String monedaInicial, String monedaCambio){
          //http cliente
 
                 HttpClient client = HttpClient.newHttpClient();
@@ -75,10 +75,10 @@ public class Myfunctions {
 
                     double resultado = obj.get("conversion_result").getAsDouble();
 
-                    System.out.println("El valor "+cantidadACambiar+" ["+monedaInicial+"]"+
-                            " corresponde al vlaor final de =>>> $"+resultado+" ["+monedaCambio+"]");
+                    return "El valor "+cantidadACambiar+" ["+monedaInicial+"]"+
+                            " corresponde al vlaor final de =>>> $"+resultado+" ["+monedaCambio+"]";
                 }catch (Exception e){
-                    System.out.println(e.getMessage());
+                    return e.getMessage();
                 }
     }
 
